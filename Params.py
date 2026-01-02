@@ -38,38 +38,9 @@ params = {
     "ip3r_threshold": 0.3,  # IP3 threshold (30% of peak)
     "ip3r_n_act": 2,      #  activation
     "ip3r_n_inact": 2,    # # Conductances
-        "g_ltcc": 0.0005,              # Spine LTCC conductance (µM/s per mV)
-        "g_ltcc_dend": 0.0003,         # Dendritic LTCC conductance
+    "g_ltcc": 0.0005,              # Spine LTCC conductance (µM/s per mV)
+    "g_ltcc_dend": 0.0003,         # Dendritic LTCC conductance
         
-        # External calcium
-        "ca_ext": 2000.0,              # External Ca concentration (µM)
-        
-        # Voltage parameters
-        "ltcc_v_shift": 0.0,           # Voltage shift for gating (mV)
-        "v_rest": -70.0,               # Resting potential (mV)
-        
-        # CDI parameters
-        "ltcc_K_CDI": 1.0,             # Half-inactivation Ca for CDI (µM)
-        "ltcc_tau_CDI": 50.0,          # CDI time constant (ms)
-        
-        # Spatial distribution
-        "ltcc_density_profile": "exponential",  # exponential, gaussian, linear, uniform
-        "ltcc_lambda": 100.0,          # Space constant for exponential (µm)
-        "ltcc_optimal_dist": 75.0,     # Optimal distance for gaussian (µm)
-        "ltcc_sigma_dist": 50.0,       # Std dev for gaussian (µm)
-        "ltcc_max_dist": 300.0,        # Max distance for linear (µm)
-        "ltcc_min_density": 0.1,       # Minimum relative density
-        
-        # Temperature
-        "temperature": 35.0,           # Temperature (Celsius)
-        "ltcc_Q10": 3.0,              # Temperature sensitivity
-        
-        # Dendritic scaling
-        "ltcc_dend_attenuation": 0.3,  # Dendritic LTCC scaling factor
-        
-        # Noise
-        "sigma_ltcc_spine": 0.00001,   # Spine LTCC noise (reduced)
-        "sigma_ltcc_dend": 0.000005,   # Dendritic LTCC noise (reduced) inactivation
 
     # Dendritic Ca2+
     "tau_ca_dend": 3.0,
