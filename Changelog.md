@@ -11,4 +11,4 @@ Removed the Calcium dependent deactivation term as it was giving buggy results o
 To a simplified neuronal LTCC Model applying the GHZ implementation referenced from Mahajan et al.(2019)
 
 
-#Explain the equations and the changes
+#Explain the equations and the changes(After exams hopefully!)
