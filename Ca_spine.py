@@ -1,29 +1,23 @@
 """
-Spine Calcium Module
+Spine Calcium Module 
+
+
 """
 
 import numpy as np
 from Params import params
 
 
-def update_ca_spine(ca_spine_current, pre_spike, nmda_v, is_active, dt, noise):
-    """
-    Updates the spinal calcium concentration
-    """    
-    # Decay term
-    dca = -ca_spine_current / params["tau_ca_spine"] * dt
-    
-    # Influx through NMDA activation
-    dca[is_active] += params["alpha_nmda"] * pre_spike * nmda_v[is_active] * dt
-    
-    # noise
+def update_ca_spine(ca_spine, pre_spike, nmda_v, dt, noise):
+
+    dca  = -ca_spine / params["tau_ca_spine"] * dt
+
+    dca += params["alpha_nmda"] * pre_spike * nmda_v * dt
+
     dca += noise * np.sqrt(dt)
-    
-    return dca
+
+    return float(dca)
 
 
-def initialize_ca_spine(n_syn):
-    """
-    This function initialises  spine calcium to zero
-    """
-    return np.zeros(n_syn)
+def initialize_ca_spine():
+    return 0.0
